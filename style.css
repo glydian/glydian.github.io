@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+:root {
+  --logoc: rgb(100,20,30);
+}
+
+body {
+  background: var(--logoc);
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  font-family: 'Nunito', sans-serif;
+}
+
+logo-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+logo-holder>h1 {
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  font-size: 4em;
+  border-bottom: 2px solid white;
+  padding: 5px 40px;
+}
+
+bar-holder {
+  margin-bottom: 10px;
+}
+
+low-bar, high-bar{
+  background: #eee;
+  width: 10px;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 0 7px;
+  transition: all 0.2s ease-in-out;
+}
+
+low-bar {
+  height: 36px;
+}
+
+high-bar, bar-holder:hover>low-bar{
+  height: 46px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+section {
+  
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 1.3em;
+}
+
+section h2 {
+  text-align: center;
+  color: white;
+  font-weight: 200;
+  font-size: 2.8em;
+  margin-bottom: -15px;
+}
+
+section div {
+  background: white;
+  padding: 50px 30px;
+  text-align: justify;
+  border-radius: 5px;
+}
+
+section p {
+  margin-bottom: 20px;
+}
