@@ -69,7 +69,7 @@ section {
   width: 40%;
   margin: 0 auto;
   border-radius: 5px;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 section h2 {
@@ -78,6 +78,15 @@ section h2 {
   font-weight: 200;
   font-size: 2.8em;
   margin-bottom: -15px;
+}
+
+section a {
+  color: white;
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
 }
 
 section div {
