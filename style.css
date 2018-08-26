@@ -4,12 +4,8 @@
   margin: 0;
 }
 
-:root {
-  --logoc: rgb(100,20,30);
-}
-
 body {
-  background: var(--logoc);
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   font-family: 'Nunito', sans-serif;
 }
 
@@ -22,18 +18,35 @@ header {
   font-family: 'Nunito', sans-serif;
 }
 
+@keyframes fadegrow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 logo-holder {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: 1s fadegrow ease-in-out;
 }
 
 logo-holder>h1 {
-  font-weight: 200;
-  letter-spacing: 0.2em;
+  font-weight: 300;
+  letter-spacing: 0.15em;
   font-size: 4em;
-  border-bottom: 2px solid white;
   padding: 5px 40px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 bar-holder {
@@ -45,23 +58,43 @@ low-bar, high-bar{
   width: 10px;
   border-radius: 2px;
   display: inline-block;
-  margin: 0 7px;
-  transition: all 0.2s ease-in-out;
+  margin: 0 5px;
+  transition-property: height;
+  transition-timing-function: ease-in-out;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+low-bar:nth-child(1),
+low-bar:nth-child(5){
+  transition-duration: 0.5s;
+}
+
+low-bar:nth-child(2){
+  transition-duration: 0.4s;
+}
+
+low-bar:nth-child(3){
+  transition-duration: 0.3s;
 }
 
 low-bar {
-  height: 36px;
+  height: 32px;
 }
 
 high-bar, bar-holder:hover>low-bar{
   height: 46px;
 }
 
+bar-holder:hover :root>body {
+  background-image: linear-gradient(300deg, #84fab0 0%, #8fd3f4 100%);
+  background: red;
+}
+
 main {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 100vh;
+  min-height: 20vh;
 }
 
 section {
@@ -75,18 +108,20 @@ section {
 section h2 {
   text-align: center;
   color: white;
-  font-weight: 200;
-  font-size: 2.8em;
+  font-weight: 300;
+  font-size: 2em;
   margin-bottom: -15px;
 }
 
 section a {
   color: white;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
 }
 
 section a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid white;
 }
 
 section div {
